@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Pen+Script&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Bruno Ace", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: calibri;
+}
+img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+/* 스크롤 스냅 */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+.scroll-item {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 내비게이션 */
+.navbar {
+  background: #f5f5f5;
+  padding: 0 15px;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.navdiv {
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navLogo {
+  display: flex;
+  margin-left: 20px;
+}
+.logo a {
+  font-size: 35px;
+  font-weight: 600;
+  color: #292927;
+}
+ul {
+  margin-right: 40px;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+li a {
+  color: #292927;
+  font-size: 15px;
+  margin-right: 25px;
+}
+.LogInBtn {
+  background-color: #FFFFFF;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.SignUpBtn {
+  background-color: #E94F24;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.LogInBtn a {
+  color: #E94F24;
+  font-weight: bold;
+}
+.SignUpBtn a {
+  color: #f5f5f5;
+  font-weight: bold;
+}
