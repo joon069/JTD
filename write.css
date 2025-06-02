@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Pen+Script&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Bruno Ace", sans-serif;
+}
+
+/* 스크롤 스냅 */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+.scroll-item {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: calibri;
+}
+
+body {
+  font-family: Calibri, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+
+img {
+  width: 60px;  /* 이전 80 → 줄임 */
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+/* 내비게이션 */
+.navbar {
+  background: #f5f5f5;
+  padding: 0 15px;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.navdiv {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navLogo {
+  display: flex;
+  margin-left: 20px;
+}
+.logo a {
+  font-size: 25px;
+  font-weight: 600;
+  color: #292927;
+}
+ul {
+  margin-right: 40px;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+li a {
+  color: #292927;
+  font-size: 15px;
+  margin-right: 25px;
+}
+.LogInBtn {
+  background-color: #FFFFFF;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.SignUpBtn {
+  background-color: #E94F24;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.LogInBtn a {
+  color: #E94F24;
+  font-weight: bold;
+}
+.SignUpBtn a {
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+.container {
+  width: 900px;
+  padding-top: 50px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+h1 {
+  font-size: 32px;
+  color: #E94F24;
+  margin-bottom: 20px;
+}
+
+.title-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.date {
+  margin-bottom: 20px;
+}
+
+.date input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.content {
+  width: 100%;
+  height: 300px;
+  padding: 16px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.emotion-select {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.emotion-select select {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+.save-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #E94F24;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #d03d1b;
+}
