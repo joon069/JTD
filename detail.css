@@ -1,0 +1,27 @@
+.detail-container {
+  max-width: 800px;
+  margin: 120px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #E94F24;
+}
+
+.detail-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.detail-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  white-space: pre-wrap;
+}

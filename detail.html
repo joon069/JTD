@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>일기 상세보기</title>
+  <link rel="stylesheet" href="./basic.css" />
+  <link rel="stylesheet" href="./detail.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="navLogo">
+        <img src="./images/jtdLOGO.png" alt="JTDLOGO" />
+        <div class="logo"><a href="./Home.html">Jot That Down</a></div>
+      </div>
+      <ul>
+        <li><a href="./Home.html">홈</a></li>
+        <li><a href="./write.html">일기쓰기</a></li>
+        <li><a href="./repository.html">일기저장소</a></li>
+        <li>joon0</li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="detail-container">
+    <h1 class="detail-title" id="detailTitle">제목</h1>
+    <p class="detail-meta">
+      <span id="detailDate">날짜</span> | <span id="detailEmotion">감정</span>
+    </p>
+    <div class="detail-content" id="detailContent">내용</div>
+  </div>
+
+  <script src="./detail.js"></script>
+</body>
+</html>
