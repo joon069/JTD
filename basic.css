@@ -7,21 +7,6 @@
   font-family: "Bruno Ace", sans-serif;
 }
 
-/* 스크롤  */
-.scroll-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior: smooth;
-}
-.scroll-item {
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 html, body {
   height: 100%;
   overflow: hidden;
@@ -57,7 +42,7 @@ img {
 .logo a {
   font-size: 25px;
   font-weight: 600;
-  color: #292927;
+  color: #E94F24;
 }
 ul {
   margin-right: 40px;
