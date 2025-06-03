@@ -7,21 +7,6 @@
   font-family: "Bruno Ace", sans-serif;
 }
 
-/* 스크롤 */
-.scroll-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior: smooth;
-}
-.scroll-item {
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 html, body {
   height: 100%;
@@ -58,10 +43,15 @@ img {
 .logo a {
   font-size: 25px;
   font-weight: 600;
-  color: #292927;
+  color: #E94F24;
 }
 ul {
   margin-right: 40px;
+}
+/* 일기저장소 활성화 */
+ul li:nth-child(3) a{
+  color:#E94F24;
+  font-weight:550;
 }
 li {
   list-style: none;
@@ -71,6 +61,9 @@ li a {
   color: #292927;
   font-size: 15px;
   margin-right: 25px;
+}
+li a:hover{
+  font-weight: 550;
 }
 .LogInBtn {
   background-color: #FFFFFF;
@@ -98,22 +91,33 @@ li a {
 }
 
 /* 저장소 부분 */
+.repository {
+  background: linear-gradient(to bottom right, #ffc3b1, #f67c5b);
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 40px;
+  padding-top: 100px;
+}
+
 .repo-container {
-  max-width: 1280px;
+  max-width: 1200px;
   padding: 0 40px;
-  text-align: left;
+  margin: 0px auto;
 }
 
 .repo-container h1 {
-  font-size: 28px;
-  color: #E94F24;
+  font-size: 40px;
+  color: #f5f5f5;
+  margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .repo-toolbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
+  margin: 0px auto;
   margin-bottom: 30px;
 }
 
