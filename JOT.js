@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ✨ repository.html 전용 처리
-
   if (repoList && sortSelect && searchInput) {
     console.log("📌 repository.html 감지됨");
 
