@@ -7,18 +7,7 @@
   font-family: "Bruno Ace", sans-serif;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-  font-family: calibri;
-}
-img {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  margin-right: 10px;
-}
-/* 스크롤 스냅 */
+/* 스크롤 */
 .scroll-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -31,6 +20,18 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: calibri;
+}
+img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
 }
 
 /* 내비게이션 */
@@ -54,7 +55,7 @@ img {
   margin-left: 20px;
 }
 .logo a {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 600;
   color: #292927;
 }
