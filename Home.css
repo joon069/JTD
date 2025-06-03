@@ -62,6 +62,12 @@ img {
 ul {
   margin-right: 40px;
 }
+/* 홈 버튼 활성화 */
+ul li:nth-child(1) a{
+  color:#E94F24;
+  font-weight:550;
+}
+
 li {
   list-style: none;
   display: inline-block;
@@ -70,6 +76,9 @@ li a {
   color: #292927;
   font-size: 15px;
   margin-right: 25px;
+}
+li a:hover{
+  font-weight: 550;
 }
 .LogInBtn {
   background-color: #FFFFFF;
