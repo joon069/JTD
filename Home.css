@@ -1,10 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap');
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
+
 * {
   margin: 0px;
   padding: 0px;
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Bruno Ace", sans-serif;
+}
+
+.typing-line {
+  font-family: "Nanum Brush Script", cursive;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.typing-line.second {
+  animation-delay: 2.2s;
 }
 
 /* 스크롤 */
@@ -20,6 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 0.5s ease;
 }
 
 html, body {
@@ -36,7 +76,7 @@ img {
 
 /* 내비게이션 */
 .navbar {
-  background: #f5f5f5;
+  background: #FFFFFF;
   padding: 0 15px;
   height: 70px;
   position: fixed;
@@ -107,15 +147,78 @@ li a:hover{
 
 /* 슬로건 박스 */
 .slogan {
-  width: 900px;
-  font-size: 40px;
-  padding: 250px 80px;
-  border-radius: 30px;
-  text-align: center;
-  background: linear-gradient(to bottom left, #F7884D, #E94F24);
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 은은하게 */
+  width: 1000px;
+  max-width: 90%;
+  height: 600px; /* ← 길이 확장 */
+  margin-left: 40px;
+  margin-top: 80px;
+  padding: 80px 100px;
+  border-radius: 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffaf5,
+    #fffaf5 45px,
+    #ffe7d9 45px,
+    #ffe7d9 46px
+  );
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #292927;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 34px;
 }
+
+.slogan::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  width: 6px;
+  height: calc(100% - 40px);
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 12px,
+    transparent 12px,
+    transparent 24px
+  );
+  border-radius: 3px;
+}
+
+.slogan-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 연필 */
+.pencil {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  width: 80px;
+  height: 20px;
+  background: #F9C56F;
+  border-radius: 4px;
+  transform: rotate(-20deg);
+  box-shadow: inset -2px 0 #C06C19;
+}
+
+.pencil::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 15px;
+  height: 20px;
+  background: #333;
+  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+}
+
+
 
 /* 내용 */
 #contents {
@@ -140,7 +243,6 @@ li a:hover{
 
 /* 발가락 */
 #footer {
-  background: #F5F5F5;
   height: 100vh;
 }
 #footer ul {
