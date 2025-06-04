@@ -1,3 +1,9 @@
+/* 홈 버튼 활성화 */
+ul li:nth-child(3) a{
+  color:#E94F24;
+  font-weight:550;
+}
+
 .detail-container {
   max-width: 800px;
   margin: 120px auto;
