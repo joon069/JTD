@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap');
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -19,6 +8,19 @@
 @keyframes blink {
   0%, 100% { border-color: transparent }
   50% { border-color: white }
+}
+
+@keyframes fadeIn {
+  0% {
+      transform: translateY(-750px) translateX(150px) rotate(920deg) scale(10);
+  }
+  100% {
+      transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
 }
 
 * {
@@ -40,10 +42,11 @@
   font-weight: bold;
   margin: 10px 0;
   display: inline-block;
+  animation-delay: 1.3s;
 }
 
 .typing-line.second {
-  animation-delay: 2.2s;
+  animation-delay: 3.0s;
 }
 
 /* 스크롤 */
@@ -195,28 +198,50 @@ li a:hover{
 }
 
 /* 연필 */
-.pencil {
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  width: 80px;
-  height: 20px;
-  background: #F9C56F;
-  border-radius: 4px;
-  transform: rotate(-20deg);
-  box-shadow: inset -2px 0 #C06C19;
+.pen {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  position: relative;
 }
 
-.pencil::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  top: 0;
-  width: 15px;
-  height: 20px;
-  background: #333;
-  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+.pen-tip {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 55px solid #f9cba5;
+  position: relative;
 }
+
+.pen-lead {
+  position: absolute;
+  top: -4px;           
+  right: -16px;       
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 15px solid #222;
+}
+
+.pen-body {
+  width: 300px;
+  height: 30px;
+  background-color: #e94f24;
+  border-top: 10px solid #f8ae47;
+  border-bottom: 10px solid #f8ae47;
+  border-radius: 1px;
+}
+.pen-tail {
+  width: 25px;
+  height: 30px;
+  background: linear-gradient(to right, #eee 0 70%, #e19494 70% 100%);
+  border-radius: 0 4px 4px 0;
+}
+
+
 
 
 
