@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jot That Down</title>
+    <link rel="stylesheet" href="./graph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="navLogo">
+          <img src="./images/jtdLOGO.png" alt="JTDLOGO" />
+          <div class="logo"><a href="./Home.html">Jot That Down</a></div>
+        </div>
+        <ul>
+          <li><a href="./Home.html">홈</a></li>
+          <li><a href="./write.html">일기쓰기</a></li>
+          <li><a href="./repository.html">일기저장소</a></li>
+          <li><a href="./graph.html">감정그래프</a></li>
+          <!-- 비로그인 시 -->
+          <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
+          <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
+          <!-- 로그인 시 -->
+          <li>joon0</li>
+        </ul>
+      </div>
+    </nav>
+    <main class="graph-page">
+      <h1>이번 주 나의 감정 흐름</h1>
+      <canvas id="emotionChart"></canvas>
+    </main>
+
+    <script src="./graph.js"></script>
+    <ul into>
+      <li>😊: 8</li>
+      <li>❤️: 6</li>
+      <li>😴: 4</li>
+      <li>😐: 2</li>
+      <li>😢: 0</li>
+      <li>😠: -2</li>
+    </ul>
+  </body>
+</html>
