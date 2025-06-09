@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="./todo.css" />
+    <link rel="stylesheet" href="./basic.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="navLogo">
+          <img src="./images/jtdLOGO.png" alt="JTDLOGO" />
+          <div class="logo"><a href="./Home.html">Jot That Down</a></div>
+        </div>
+        <ul>
+          <li><a href="./Home.html">홈</a></li>
+          <li><a href="./write.html">일기쓰기</a></li>
+          <li><a href="./repository.html">일기저장소</a></li>
+          <li><a href="./graph.html">감정그래프</a></li>
+          <li><a href="./todo.html">Todo리스트</a></li>
+          <!-- 비로그인 시 -->
+          <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
+          <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
+          <!-- 로그인 시 -->
+          <li>joon0</li>
+        </ul>
+      </div>
+    </nav>
+    <h1 style="margin-top: 120px; text-align: center;">나의 ToDo 리스트</h1>
+    <div id="todo-scheduler">
+      <div id="todo-list-section">
+        <h2>할 일 목록</h2>
+        <div id="todo-input-area">
+          <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
+          <button id="add-btn">추가</button>
+        </div>
+    
+        <ul id="todo-list"></ul>
+      </div>
+    
+      <!-- 오른쪽 영역: 타임라인 -->
+      <div id="timeline-section">
+        <h2>시간표</h2>
+        <div class="timeline-slot">08:00</div>
+        <div class="timeline-slot">09:00</div>
+        <div class="timeline-slot">10:00</div>
+        <div class="timeline-slot">11:00</div>
+        <div class="timeline-slot">12:00</div>
+        <div class="timeline-slot">13:00</div>
+        <div class="timeline-slot">14:00</div>
+        <div class="timeline-slot">15:00</div>
+        <div class="timeline-slot">16:00</div>
+        <div class="timeline-slot">17:00</div>
+        <div class="timeline-slot">18:00</div>
+        <div class="timeline-slot">19:00</div>
+        <div class="timeline-slot">20:00</div>
+        <div class="timeline-slot">21:00</div>
+        <div class="timeline-slot">22:00</div>
+        <div class="timeline-slot">23:00</div>
+        <div class="timeline-slot">24:00</div>
+        <!-- 계속 추가 -->
+      </div>
+    </div>
+    <script src="./todo.js"></script>
+  </body>
+</html>
