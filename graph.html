@@ -21,6 +21,7 @@
           <li><a href="./write.html">일기쓰기</a></li>
           <li><a href="./repository.html">일기저장소</a></li>
           <li><a href="./graph.html">감정그래프</a></li>
+          <li><a href="./todo.html">Todo리스트</a></li> 
           <!-- 비로그인 시 -->
           <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
           <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
@@ -30,18 +31,26 @@
       </div>
     </nav>
     <main class="graph-page">
-      <h1>이번 주 나의 감정 흐름</h1>
-      <canvas id="emotionChart"></canvas>
-    </main>
-
+      <div class="graph-header">
+        <h1>감정 그래프</h1>
+        <p>지난 일주일간의 감정 기록을 시각화한 그래프입니다.</p>
+      </div>
+    
+      <div class="graph-wrapper">
+        <ul class="emoInfo">
+          <li>😊 행복: 8</li>
+          <li>❤️ 감사: 6</li>
+          <li>😴 피곤: 4</li>
+          <li>😐 그저 그럼: 2</li>
+          <li>😢 슬픔: 0</li>
+          <li>😠 화남: -2</li>
+        </ul>
+    
+        <div class="chart-box">
+          <canvas id="emotionChart"></canvas>
+        </div>
+      </div>
+    </main>    
     <script src="./graph.js"></script>
-    <ul into>
-      <li>😊: 8</li>
-      <li>❤️: 6</li>
-      <li>😴: 4</li>
-      <li>😐: 2</li>
-      <li>😢: 0</li>
-      <li>😠: -2</li>
-    </ul>
   </body>
 </html>

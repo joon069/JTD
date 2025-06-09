@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
   const emotionScoreMap = {
     "😊": 8,
     "❤️": 6,
@@ -44,16 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }]
     },
     options: {
+      responsive: false,               // ✅ 반응형 꺼서 고정 크기 사용
+      maintainAspectRatio: false,     // ✅ 비율 유지 해제
       scales: {
         y: {
           min: -3,
           max: 10,
-          grid: {
-            color: "#eee"
-          },
-          ticks: {
-            stepSize: 1
-          }
+          grid: { color: "#eee" },
+          ticks: { stepSize: 1 }
         }
       },
       plugins: {
@@ -80,6 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       }
-    }    
+    }
   });
 });
