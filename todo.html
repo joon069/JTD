@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO</title>
+    <title>TODO | Jot That Down</title>
     <link rel="stylesheet" href="./todo.css" />
     <link rel="stylesheet" href="./basic.css" />
   </head>
@@ -28,7 +28,7 @@
         </ul>
       </div>
     </nav>
-    <h1 style="margin-top: 120px; text-align: center;">나의 ToDo 리스트</h1>
+    <h1>나의 ToDo 리스트</h1>
     <div id="todo-scheduler">
       <div id="todo-list-section">
         <h2>할 일 목록</h2>
@@ -36,31 +36,30 @@
           <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
           <button id="add-btn">추가</button>
         </div>
-    
         <ul id="todo-list"></ul>
       </div>
     
       <!-- 오른쪽 영역: 타임라인 -->
       <div id="timeline-section">
         <h2>시간표</h2>
-        <div class="timeline-slot">08:00</div>
-        <div class="timeline-slot">09:00</div>
-        <div class="timeline-slot">10:00</div>
-        <div class="timeline-slot">11:00</div>
-        <div class="timeline-slot">12:00</div>
-        <div class="timeline-slot">13:00</div>
-        <div class="timeline-slot">14:00</div>
-        <div class="timeline-slot">15:00</div>
-        <div class="timeline-slot">16:00</div>
-        <div class="timeline-slot">17:00</div>
-        <div class="timeline-slot">18:00</div>
-        <div class="timeline-slot">19:00</div>
-        <div class="timeline-slot">20:00</div>
-        <div class="timeline-slot">21:00</div>
-        <div class="timeline-slot">22:00</div>
-        <div class="timeline-slot">23:00</div>
-        <div class="timeline-slot">24:00</div>
-        <!-- 계속 추가 -->
+        <div class="timeline-slot" data-time="08:00">08:00</div>
+        <div class="timeline-slot" data-time="09:00">09:00</div>
+        <div class="timeline-slot" data-time="10:00">10:00</div>
+        <div class="timeline-slot" data-time="11:00">11:00</div>
+        <div class="timeline-slot" data-time="12:00">12:00</div>
+        <div class="timeline-slot" data-time="13:00">13:00</div>
+        <div class="timeline-slot" data-time="14:00">14:00</div>
+        <div class="timeline-slot" data-time="15:00">15:00</div>
+        <div class="timeline-slot" data-time="16:00">16:00</div>
+        <div class="timeline-slot" data-time="17:00">17:00</div>
+        <div class="timeline-slot" data-time="18:00">18:00</div>
+        <div class="timeline-slot" data-time="19:00">19:00</div>
+        <div class="timeline-slot" data-time="20:00">20:00</div>
+        <div class="timeline-slot" data-time="21:00">21:00</div>
+        <div class="timeline-slot" data-time="22:00">22:00</div>
+        <div class="timeline-slot" data-time="23:00">23:00</div>
+        <div class="timeline-slot" data-time="24:00">24:00</div>
+
       </div>
     </div>
     <script src="./todo.js"></script>
