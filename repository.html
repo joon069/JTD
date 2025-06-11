@@ -6,7 +6,7 @@
   <title>일기 저장소 | Jot That Down</title>
   <link rel="stylesheet" href="./repository.css" />
 </head>
-<body class="scroll-container">
+<body>
   <nav class="navbar">
     <div class="navdiv">
       <div class="navLogo">
@@ -17,85 +17,33 @@
         <li><a href="./Home.html">홈</a></li>
         <li><a href="./write.html">일기쓰기</a></li>
         <li><a href="./repository.html">일기저장소</a></li>
+        <li><a href="./graph.html">감정그래프</a></li>
+        <li><a href="./todo.html">Todo리스트</a></li> 
         <!-- 비로그인 시 -->
         <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
-      <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
+        <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
         <!-- 로그인 시 -->
         <li>joon0</li>
       </ul>
     </div>
   </nav>
-
+  
   <div class="repository">
     <div class="repo-container">
       <h1>내 일기 저장소</h1>
-
+      
       <div class="repo-toolbar">
-        <input type="text" placeholder="제목 또는 내용 검색" />
-        <select>
-          <option>최신순</option>
-          <option>오래된순</option>
-          <option>감정별</option>
+        <input type="text" placeholder="제목 또는 내용 검색" id="searchInput" />
+        <select id="sortSelect">
+          <option value="new">최신순</option>
+          <option value="old">오래된순</option>
         </select>
       </div>
       <hr>
-
-      <div class="repo-list">
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.15</span>
-            <span class="repo-emotion">😊</span>
-          </div>
-          <h3 class="repo-title">햇살 좋은 날</h3>
-          <p class="repo-preview">오늘은 날씨가 맑고 따뜻해서 오랜만에 산책을 했다...</p>
-        </div>
-
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.14</span>
-            <span class="repo-emotion">😴</span>
-          </div>
-          <h3 class="repo-title">피곤한 하루</h3>
-          <p class="repo-preview">일이 너무 많아서 지쳤다. 오늘은 일찍 자야겠다...</p>
-        </div>
-
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.13</span>
-            <span class="repo-emotion">😐</span>
-          </div>
-          <h3 class="repo-title">별일 없는 하루</h3>
-          <p class="repo-preview">오늘은 평범한 하루였다. 강아지랑 놀다 하루가 갔다...</p>
-        </div>
-
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.12</span>
-            <span class="repo-emotion">😢</span>
-          </div>
-          <h3 class="repo-title">마음이 조금 무거운 날</h3>
-          <p class="repo-preview">예상치 못한 소식에 마음이 무거웠다. 친구와 오래 통화했다...</p>
-        </div>
-
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.11</span>
-            <span class="repo-emotion">❤️</span>
-          </div>
-          <h3 class="repo-title">감사한 하루</h3>
-          <p class="repo-preview">소소한 일상 속에서 감사함을 느꼈다. 나 자신에게도 고마웠다...</p>
-        </div>
-
-        <div class="repo-card">
-          <div class="repo-header">
-            <span class="repo-date">2025.05.10</span>
-            <span class="repo-emotion">😠</span>
-          </div>
-          <h3 class="repo-title">짜증났던 순간</h3>
-          <p class="repo-preview">작은 일에 예민하게 반응했던 하루. 다음엔 더 유연하게 넘기자...</p>
-        </div>
-      </div>
+      
+      <div class="repo-list" id="repoList"></div>
     </div>
   </div>
+  <script src="./JOT.js"></script>
 </body>
 </html>
