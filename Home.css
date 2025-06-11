@@ -37,12 +37,14 @@
   white-space: nowrap;
   border-right: 2px solid white;
   width: 0;
-  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
   font-size: 50px;
   font-weight: bold;
   margin: 10px 0;
   display: inline-block;
-  animation-delay: 1.3s;
+  animation:
+    typing 2s steps(30, end) forwards,
+    blink 0.7s step-end infinite;
+  animation-delay: 1.3s, 1.3s;
 }
 
 .typing-line.second {
@@ -52,23 +54,25 @@
 /* 스크롤 */
 .scroll-container {
   scroll-snap-type: y mandatory;
+  background: linear-gradient(to top, #fff3eb, #fdfdfd);
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: smooth;
 }
 .scroll-item {
+  padding: 100px 30px;
+  min-height: 600px;
+  transition: background 0.5s ease;
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.5s ease;
 }
 
 html, body {
   height: 100%;
   overflow: hidden;
-  font-family: calibri;
 }
 img {
   width: 60px;
@@ -240,11 +244,6 @@ li a:hover{
   background: linear-gradient(to right, #eee 0 70%, #e19494 70% 100%);
   border-radius: 0 4px 4px 0;
 }
-
-
-
-
-
 /* 내용 */
 #contents {
   width: 1000px;
@@ -268,8 +267,14 @@ li a:hover{
 
 /* 발가락 */
 #footer {
-  height: 100vh;
+  background: linear-gradient(to right, #fff3eb, #fdfdfd);
+  padding: 60px 40px;
+  color: #333;
+  font-size: 14px;
+  border-top: 2px solid #f0d4c3;
+  font-family: "Nanum Pen Script", cursive;
 }
+
 #footer ul {
   display: flex;
   gap: 30px;
@@ -279,3 +284,80 @@ li a:hover{
   font-size: 16px;
   color: #292927;
 }
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  background: #fffaf5;
+  padding: 50px 20px;
+  color: #292927;
+  font-size: 15px;
+  line-height: 1.8;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #E94F24;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #292927;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-logo-area {
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  color: #E94F24;
+  margin-bottom: 8px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 4px 0;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+
