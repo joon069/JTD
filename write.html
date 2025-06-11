@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>일기쓰기</title>
+  <title>일기쓰기 | Jot That Down</title>
   <link rel="stylesheet" href="./write.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
-  <body class="write">
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="navLogo">
-          <img src="./images/jtdLOGO.png" alt="JTDLOGO" />
-          <div class="logo"><a href="./Home.html">Jot That Down</a></div>
-        </div>
-        <ul>
-          <li><a href="./Home.html">홈</a></li>
-          <li><a href="./write.html">일기쓰기</a></li>
-          <li><a href="./repository.html">일기저장소</a></li>
-          <!-- 비로그인 시 -->
-          <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
-          <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
-          <!-- 로그인 시 -->
-          <li>joon0</li>
-        </ul>
+<body class="write">
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="navLogo">
+        <img src="./images/jtdLOGO.png" alt="JTDLOGO" />
+        <div class="logo"><a href="./Home.html">Jot That Down</a></div>
       </div>
-    </nav>
-
-    <div class="container">
-      <h1>오늘의 일기</h1>
-      <input type="text" class="title-input" placeholder="제목을 입력하세요 (선택)" />
-      <div class="date">
-        <label for="date">날짜:</label>
-        <input type="date" id="date" name="date" value="" />
-      </div>
-
-      <textarea class="content" placeholder="오늘 어떤 일이 있었나요? 자유롭게 기록해보세요 :)"></textarea>
-      <div class="emotion-select">
-        <span>오늘의 기분:</span>
-        <select>
-          <option>😊 행복</option>
-          <option>😐 그저 그럼</option>
-          <option>😢 슬픔</option>
-          <option>😠 화남</option>
-          <option>😴 피곤</option>
-          <option>❤️ 감사</option>
-        </select>
-      </div>
-      <button class="save-btn">저장하기</button>
+      <ul>
+        <li><a href="./Home.html">홈</a></li>
+        <li><a href="./write.html">일기쓰기</a></li>
+        <li><a href="./repository.html">일기저장소</a></li>
+        <li><a href="./graph.html">감정그래프</a></li>
+        <li><a href="./todo.html">Todo리스트</a></li> 
+        <!-- 비로그인 시 -->
+        <!-- <button class="LogInBtn"><a href="#">로그인</a></button>
+        <button class="SignUpBtn"><a href="#">회원가입</a></button> -->
+        <!-- 로그인 시 -->
+        <li>joon0</li>
+      </ul>
     </div>
-  </body>
+  </nav>
+  
+  <div class="container">
+    <h1>오늘의 일기</h1>
+    <input type="text" class="title-input" placeholder="제목을 입력하세요 (선택)" />
+    <div class="date">
+      <label for="date">날짜:</label>
+      <input type="date" id="date" name="date" />
+    </div>
+    <textarea class="content" placeholder="오늘 어떤 일이 있었나요? 자유롭게 기록해보세요 :)"></textarea>
+    <div class="emotion-select">
+      <span>오늘의 기분:</span>
+      <select class="emotion">
+        <option>😊 행복</option>
+        <option>😐 그저 그럼</option>
+        <option>😢 슬픔</option>
+        <option>😠 화남</option>
+        <option>😴 피곤</option>
+        <option>❤️ 감사</option>
+      </select>
+    </div>
+    <button class="save-btn">저장하기</button>
+  </div>
+  <script src="./JOT.js"></script>
+</body>
 </html>
