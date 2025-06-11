@@ -12,19 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const weekScores = Array(7).fill(null);
   const diaries = JSON.parse(localStorage.getItem("diaries") || "[]");
 
+  // 현재 날짜 기준 이번 주의 시작(월요일)과 끝(일요일) 계산
+  const today = new Date();
+  const currentDay = today.getDay(); // 0(일) ~ 6(토)
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - ((currentDay + 6) % 7)); // 이번 주 월요일
+  monday.setHours(0, 0, 0, 0);
+
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate() + 6);
+  sunday.setHours(23, 59, 59, 999);
+
   diaries.forEach(diary => {
     const date = new Date(diary.date);
-    const day = date.getDay(); // 0: 일 ~ 6: 토
-    const weekdayIndex = (day + 6) % 7; // 월=0, 일=6
-  
-    const emoji = diary.emotion?.trim().slice(0, 2); // ✅ 이모지만 추출
-    const score = emotionScoreMap[emoji];
-  
-    if (score !== undefined) {
-      weekScores[weekdayIndex] = score;
+    if (date >= monday && date <= sunday) {
+      const day = date.getDay(); // 0: 일 ~ 6: 토
+      const weekdayIndex = (day + 6) % 7; // 월=0, 일=6
+
+      const emoji = diary.emotion?.trim().slice(0, 2);
+      const score = emotionScoreMap[emoji];
+
+      if (score !== undefined) {
+        weekScores[weekdayIndex] = score;
+      }
     }
   });
-  
 
   const ctx = document.getElementById("emotionChart").getContext("2d");
 
@@ -43,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }]
     },
     options: {
-      responsive: false,               // ✅ 반응형 꺼서 고정 크기 사용
-      maintainAspectRatio: false,     // ✅ 비율 유지 해제
+      responsive: false,
+      maintainAspectRatio: false,
       scales: {
         y: {
           min: -3,
