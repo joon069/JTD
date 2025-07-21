@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일기쓰기 | Jot That Down</title>
+  <link rel="stylesheet" href="./write.css" />
+  <script type="module" src="/Home/Home.js"></script>
+</head>
+<body class="write">
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="navLogo">
+        <img src="/images/jtdLOGO.png" alt="JTDLOGO" />
+        <div class="logo"><a href="/Home/Home.html">Jot That Down</a></div>
+      </div>
+      <ul id="navbar">
+      </ul>
+    </div>
+  </nav>
+
+    <div class="container">
+      <h1>오늘의 일기</h1>
+      <input type="text" class="title-input" placeholder="제목을 입력하세요 (선택)" />
+      <div class="date">
+        <label for="date">날짜:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <textarea class="content" placeholder="오늘 어떤 일이 있었나요? 자유롭게 기록해보세요 :)"></textarea>
+      <div class="emotion-select">
+        <span>오늘의 기분:</span>
+        <select class="emotion">
+          <option>😊 행복</option>
+          <option>😐 그저 그럼</option>
+          <option>😢 슬픔</option>
+          <option>😠 화남</option>
+          <option>😴 피곤</option>
+          <option>❤️ 감사</option>
+        </select>
+      </div>
+      <button class="save-btn">저장하기</button>
+    </div>
+
+  <script type="module" src="./write.js"></script>
+</body>
+</html>
