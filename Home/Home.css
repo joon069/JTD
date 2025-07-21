@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap');
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
+
+@keyframes fadeIn {
+  0% {
+      transform: translateY(-750px) translateX(150px) rotate(920deg) scale(10);
+  }
+  100% {
+      transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Bruno Ace", sans-serif;
+}
+
+.typing-line {
+  font-family: "Nanum Brush Script", cursive;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: inline-block;
+  animation:
+    typing 2s steps(30, end) forwards,
+    blink 0.7s step-end infinite;
+  animation-delay: 1.3s, 1.3s;
+}
+
+.typing-line.second {
+  animation-delay: 3.0s;
+}
+
+/* 스크롤 */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  background: linear-gradient(to top, #fff3eb, #fdfdfd);
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+.scroll-item {
+  padding: 100px 30px;
+  min-height: 600px;
+  transition: background 0.5s ease;
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+/* 내비게이션 */
+.navbar {
+  background: #FFFFFF;
+  padding: 0 15px;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.navdiv {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navLogo {
+  display: flex;
+  margin-left: 20px;
+}
+.logo a {
+  font-size: 25px;
+  font-weight: 600;
+  color: #E94F24;
+}
+ul {
+  margin-right: 40px;
+}
+/* 홈 버튼 활성화 */
+ul li:nth-child(1) a{
+  color:#E94F24;
+  font-weight:550;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+li a {
+  color: #292927;
+  font-size: 15px;
+  margin-right: 25px;
+}
+li a:hover{
+  font-weight: 550;
+}
+.LogInBtn {
+  background-color: #FFFFFF;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.SignUpBtn {
+  background-color: #E94F24;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 70px;
+  border: none;
+}
+.LogInBtn a {
+  color: #E94F24;
+  font-weight: bold;
+}
+.SignUpBtn a {
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* 슬로건 박스 */
+.slogan {
+  width: 1000px;
+  max-width: 90%;
+  height: 600px; /* ← 길이 확장 */
+  margin-left: 40px;
+  margin-top: 80px;
+  padding: 80px 100px;
+  border-radius: 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffaf5,
+    #fffaf5 45px,
+    #ffe7d9 45px,
+    #ffe7d9 46px
+  );
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: #292927;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 34px;
+}
+
+.slogan::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  width: 6px;
+  height: calc(100% - 40px);
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 12px,
+    transparent 12px,
+    transparent 24px
+  );
+  border-radius: 3px;
+}
+
+.slogan-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 연필 */
+.pen {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  position: relative;
+}
+
+.pen-tip {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 55px solid #f9cba5;
+  position: relative;
+}
+
+.pen-lead {
+  position: absolute;
+  top: -4px;           
+  right: -16px;       
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 15px solid #222;
+}
+
+.pen-body {
+  width: 300px;
+  height: 30px;
+  background-color: #e94f24;
+  border-top: 10px solid #f8ae47;
+  border-bottom: 10px solid #f8ae47;
+  border-radius: 1px;
+}
+.pen-tail {
+  width: 25px;
+  height: 30px;
+  background: linear-gradient(to right, #eee 0 70%, #e19494 70% 100%);
+  border-radius: 0 4px 4px 0;
+}
+/* 내용 */
+#contents {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+.text-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#contents p {
+  width: 800px;
+  line-height: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #333;
+}
+
+/* 발가락 */
+#footer {
+  background: linear-gradient(to right, #fff3eb, #fdfdfd);
+  padding: 60px 40px;
+  color: #333;
+  font-size: 14px;
+  border-top: 2px solid #f0d4c3;
+  font-family: "Nanum Pen Script", cursive;
+}
+
+#footer ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+#footer li a {
+  font-size: 16px;
+  color: #292927;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  background: #fffaf5;
+  padding: 50px 20px;
+  color: #292927;
+  font-size: 15px;
+  line-height: 1.8;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #E94F24;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #292927;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-logo-area {
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  color: #E94F24;
+  margin-bottom: 8px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 4px 0;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+
